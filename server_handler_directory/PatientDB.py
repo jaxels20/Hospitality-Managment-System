@@ -1,4 +1,5 @@
 import Patient
+import pickle
 
 
 class PatientsDB:
@@ -16,3 +17,11 @@ class PatientsDB:
         if patient_object in self.__list_of_patients:
             self.__list_of_patients.remove(patient_object)
 
+
+    def fill_list_of_patients(self):
+        with open('data/patients_data.pkl', 'rb') as md:
+            while True:
+                try:
+                    self.__list_of_patients.append(pickle.load(md))
+                except EOFError:
+                    break

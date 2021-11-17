@@ -10,6 +10,7 @@ class MedicalEmployee:
         return self.__name
 
     def __eq__(self, other):
-        if self.__username == other.__username and self.__password  == other.__password:
+        if self.__username == other.__username and self.__password == other.__password:
             return True
         return False
+
