@@ -6,7 +6,7 @@ class MedicalDB:
         self.__list_of_medicine = []
 
     def fill_medical_db(self):
-        with open('medical_data.pkl', 'rb') as md:
+        with open('data/medical_data.pkl', 'rb') as md:
             while True:
                 try:
                     self.__list_of_medicine.append(pickle.load(md))

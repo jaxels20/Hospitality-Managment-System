@@ -1,5 +1,6 @@
 import Admin as admin
 import MedicalEmployee as med_emp
+import pickle
 
 
 class EmployeeDB:
@@ -32,6 +33,24 @@ class EmployeeDB:
     def remove_doctor(self, doctor):
         if doctor in self.__list_of_doctors:
             self.__list_of_nurses.remove(doctor)
+
+    def fill_list_of_doctors(self):
+        with open('data/doctors_data.pkl', 'rb') as md:
+            while True:
+                try:
+                    self.__list_of_doctors.append(pickle.load(md))
+                except EOFError:
+                    break
+
+    def fill_list_of_nurses(self):
+        with open('data/nurses_data.pkl', 'rb') as md:
+            while True:
+                try:
+                    self.__list_of_nurses.append(pickle.load(md))
+                except EOFError:
+                    break
+
+
 
 
 
