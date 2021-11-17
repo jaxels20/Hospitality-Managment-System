@@ -1,5 +1,5 @@
 import PySimpleGUI as sg
-
+from server_handler_directory import ServerHandler
 
 class AdminView:
 
@@ -7,11 +7,14 @@ class AdminView:
         self.data = []
 
 
-    def run_admin(self):
+    def run_admin(self, srv_handler):
         layout = [[sg.Button('Logout')],
-                  [sg.Text('Patients', size=(15, 1)), sg.Text('Doctors', size=(15, 1)), sg.Text('Nurses', size=(15, 1))],
-                  [sg.Listbox([], size=(15, 10)), sg.Listbox([], size=(15, 10)), sg.Listbox([], size=(15, 10))],
-                  [sg.Button('Add patient', size=(15, 1)), sg.Button('Add doctor', size=(15, 1)), sg.Button('Add nurse', size=(15, 1))]
+                  [sg.Text('Patients', size=(45, 1)), sg.Text('Doctors', size=(45, 1)), sg.Text('Nurses', size=(45, 1))],
+                  [sg.Listbox(srv_handler.get_patientdb().get_all_patients(), size=(50, 10)),
+                   sg.Listbox(srv_handler.get_empployeedb().get_all_doctors(), size=(50, 10)),
+                   sg.Listbox(srv_handler.get_empployeedb().get_all_nurses(), size=(50, 10))],
+                  [sg.Button('Add patient', size=(45, 1)), sg.Button('Add doctor', size=(45, 1)),
+                   sg.Button('Add nurse', size=(45, 1))]
                   ]
         window = sg.Window("Admin view", layout)
         event, values = window.read()
@@ -19,13 +22,13 @@ class AdminView:
         while True:
             if event == 'Add patient':
                 self.add_patient()
-                event, values = self.run_admin()
+                event, values = self.run_admin(srv_handler)
             elif event == 'Add doctor':
                 self.add_doctor()
-                event, values = self.run_admin()
+                event, values = self.run_admin(srv_handler)
             elif event == 'Add nurse':
                 self.add_nurse()
-                event, values = self.run_admin()
+                event, values = self.run_admin(srv_handler)
             else:
                 break
 
@@ -75,6 +78,10 @@ class AdminView:
         window.close()
         return event, values
 
+
+serverhandler1 = ServerHandler.ServerHandler()
+
 admin = AdminView()
-event, values = admin.run_admin()
+
+event, values = admin.run_admin(serverhandler1)
 print(event, values)
