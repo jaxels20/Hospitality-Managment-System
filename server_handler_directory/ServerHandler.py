@@ -3,6 +3,7 @@ from server_handler_directory import PatientDB
 from server_handler_directory import Medical_DB
 from server_handler_directory import ServerConnectionManager
 import pickle
+import time
 
 
 class ServerHandler:
@@ -24,23 +25,24 @@ class ServerHandler:
 
     def send_all_data(self):
         server_handler = ServerHandler()
-        pickled_object = pickle.dumps(server_handler.__medical_db)
+        pickled_object_medical_db = pickle.dumps(server_handler.get_medicaldb())
+        pickled_object_emp_db = pickle.dumps(server_handler.get_empployeedb())
+        pickled_object_patient_db = pickle.dumps(server_handler.get_patientdb())
 
         with self.__ServerConnectionManager.get_socket() as s:
             s.listen()
             conn, addr = s.accept()
             with conn:
-                while True:
-                    data = conn.recv(1024)
-                    print('connected')
-                    if not data:
-                        break
-                    conn.sendall(data)
+                conn.sendall(pickled_object_emp_db)
+                time.sleep(1)
+                conn.sendall(pickled_object_patient_db)
+                time.sleep(1)
+                conn.sendall(pickled_object_medical_db)
 
-srv = ServerHandler()
 
-srv.send_all_data()
+serv = ServerHandler()
 
+serv.send_all_data()
 
 
 
