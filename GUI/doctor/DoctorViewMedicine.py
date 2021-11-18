@@ -1,5 +1,6 @@
 import PySimpleGUI as sg
 
+
 class DoctorViewMedicine:
 
     def __init__(self):
