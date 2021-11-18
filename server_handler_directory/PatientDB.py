@@ -2,7 +2,7 @@ import pickle
 import server_handler_directory.Patient as Patient
 import server_handler_directory.MedicalRecord as MedicalRecord
 import server_handler_directory.FinancialRecord as FinancialRecord
-
+from pathlib import Path
 import sys
 from server_handler_directory import PatientDB
 sys.modules['Patient'] = Patient
@@ -26,8 +26,9 @@ class PatientDB:
 
 
     def fill_list_of_patients(self):
+        file_path = Path(__file__).parents[0].joinpath("data", "patients_data.pkl")
         list = []
-        with open(r'C:\Users\Bruger\Desktop\Hospitality-Managment-System1\server_handler_directory\data\patients_data.pkl', 'rb') as md:
+        with open(file_path, 'rb') as md:
             while True:
                 try:
                     list.append(pickle.load(md))
