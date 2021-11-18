@@ -1,10 +1,17 @@
-import Patient
 import pickle
+import server_handler_directory.Patient as Patient
+import server_handler_directory.MedicalRecord as MedicalRecord
+import server_handler_directory.FinancialRecord as FinancialRecord
 
+import sys
+from server_handler_directory import PatientDB
+sys.modules['Patient'] = Patient
+sys.modules['MedicalRecord'] = MedicalRecord
+sys.modules['FinancialRecord'] = FinancialRecord
 
-class PatientsDB:
+class PatientDB:
     def __init__(self):
-        self.__list_of_patients = []
+        self.__list_of_patients = self.fill_list_of_patients()
 
     def get_all_patients(self):
         return self.__list_of_patients
@@ -19,9 +26,11 @@ class PatientsDB:
 
 
     def fill_list_of_patients(self):
-        with open('data/patients_data.pkl', 'rb') as md:
+        list = []
+        with open(r'C:\Users\Bruger\Desktop\Hospitality-Managment-System1\server_handler_directory\data\patients_data.pkl', 'rb') as md:
             while True:
                 try:
-                    self.__list_of_patients.append(pickle.load(md))
+                    list.append(pickle.load(md))
                 except EOFError:
-                    break
+                    return list
+

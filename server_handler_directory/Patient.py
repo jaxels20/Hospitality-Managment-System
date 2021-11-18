@@ -1,5 +1,6 @@
-import MedicalRecord as MR
-import FinancialRecord as FR
+import server_handler_directory.MedicalRecord as MR
+import server_handler_directory.FinancialRecord as FR
+
 
 class Patient:
     def __init__(self, cpr, name, bloodtype, age, height):
@@ -11,7 +12,6 @@ class Patient:
 
         self.medical_record = MR.MedicalRecord()
         self.billing_record = FR.FinancialRecord()
-
 
     def __eq__(self, other):
         if self.__cpr == other.__cpr:
