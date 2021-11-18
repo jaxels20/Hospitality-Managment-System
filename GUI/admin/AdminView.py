@@ -19,32 +19,3 @@ class AdminView:
 
     def run_admin_view(self):
         return sg.Window("Admin view", self.__layout, finalize=True)
-
-# def run_admin(self, srv_handler):
-#     layout =
-#     window = sg.Window("Admin view", layout)
-#     event, values = window.read()
-#     while True:
-#         if event == 'Add patient':
-#             self.add_patient()
-#             event, values = self.run_admin(srv_handler)
-#         elif event == 'Add doctor':
-#             self.add_doctor()
-#             event, values = self.run_admin(srv_handler)
-#         elif event == 'Add nurse':
-#             self.add_nurse()
-#             event, values = self.run_admin(srv_handler)
-#         elif event == '_PATIENT_':
-#             self.patient_popup(values)
-#             event, values = self.run_admin(srv_handler)
-#         elif event == '_DOCTOR_':
-#             self.doctor_popup(values)
-#             event, values = self.run_admin(srv_handler)
-#         elif event == '_NURSE_':
-#             self.nurse_popup(values)
-#             event, values = self.run_admin(srv_handler)
-#         else:
-#             break
-#
-#     window.close()
-#     return event, values
