@@ -7,17 +7,20 @@ import GUI.doctor.DoctorConfirmAdd as dca
 import server_handler_directory.ServerHandler as ServerHandler
 
 
-class DoctorV:
+class DoctorGui:
 
-    def __init__(self):
-        self.data = []
+    def __init__(self, patient_DB, medical_DB):
+        self.__doctor_view = dview.DoctorView(patient_DB)
+        self.__doctor_view_patient = dvp.DoctorViewPatient()
+        #ovnstående virker men gør ikke det den skal
 
-    def run_doctor(self):
-        # Creates a serverhandler
-        sh = ServerHandler.ServerHandler()
 
-        # Creates a window for admin view
-        DoctorView = dview.DoctorView(sh).run_doctor_view()
+        self.__doctor_view_medicine = dvm.DoctorViewMedicine()
+        self.__doctor_add_medicine = dam.DoctorAddMedicine(medical_DB)
+        self.__confirm_add = dca.DoctorConfirmAdd()
+
+    def run_doctor(self, patient_DB, medical_DB):
+        DoctorView = self.__doctor_view.run_doctor_view()
 
         # Creates to attributes for windows.
         window1, window2 = DoctorView, None
@@ -33,13 +36,12 @@ class DoctorV:
                 elif window == window1:  # if closing win 1, exit program
                     break
             elif event == '_PATIENT_':
-                window2 = dvp.DoctorViewPatient(sh).run_doctor_view_patient()
+                window2 = self.__doctor_view_patient.run_doctor_view_patient()
             elif event == '_MEDICAL_':
-                window2 = dvm.DoctorViewMedicine().run_doctor_view_medicine()
+                window2 = self.__doctor_view_medicine.run_doctor_view_medicine()
             elif event == 'Add medicine':
-                window2 = dam.DoctorAddMedicine(sh).run_doctor_add_medicine()
+                window2 = self.__doctor_add_medicine.run_doctor_add_medicine()
             elif event == '_MEDICINE_':
-                window2 = dca.DoctorConfirmAdd().run_doctor_confirm_add()
-
+                window2 = self.__confirm_add.run_doctor_confirm_add()
 
         window.close()
