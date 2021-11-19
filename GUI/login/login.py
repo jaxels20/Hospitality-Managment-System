@@ -1,7 +1,7 @@
 import PySimpleGUI as sg
 
 
-class LoginView:
+class LoginV:
 
     def __init__(self):
         self.data = []
@@ -11,5 +11,7 @@ class LoginView:
                     sg.InputText('', key='-password', password_char='*')], [sg.Submit("Login"), sg.Exit("Cancel")]]
         window = sg.Window("Login", layout)
         event, values = window.read()
+        if event == sg.WIN_CLOSED:
+            return None
         window.close()
         return event, values

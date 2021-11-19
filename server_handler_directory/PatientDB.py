@@ -16,13 +16,18 @@ class PatientDB:
     def get_all_patients(self):
         return self.__list_of_patients
 
-    def create_patient(self, cpr, name, bloodtype, age, birthdate, height):
-        patient = Patient.Patient(cpr, name, bloodtype, age, birthdate, height)
+    def create_patient(self, cpr, name, bloodtype, birthdate, height):
+        patient = Patient.Patient(cpr, name, bloodtype, birthdate, height)
         self.__list_of_patients.append(patient)
 
-    def remove_patient(self, patient_object):
-        if patient_object in self.__list_of_patients:
-            self.__list_of_patients.remove(patient_object)
+    # def remove_patient(self, patient_object):
+    #     if patient_object in self.__list_of_patients:
+    #         self.__list_of_patients.remove(patient_object)
+
+    def remove_patient(self, patient_cpr):
+        for i in range(len(self.__list_of_patients)):
+            if patient_cpr == self.__list_of_patients[i].get_cpr():
+                del self.__list_of_patients[i]
 
 
     def fill_list_of_patients(self):

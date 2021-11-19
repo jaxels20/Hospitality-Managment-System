@@ -7,10 +7,12 @@ class MedicalEmployee:
         self.__name = name
 
     def __repr__(self):
-        return self.__name
+        return f"Name: {self.__name}, Username: {self.__username}"
 
     def __eq__(self, other):
-        if self.__username == other.__username and self.__password == other.__password:
+        if self.__username == other.__username:
             return True
         return False
 
+    def get_username(self):
+        return self.__username
