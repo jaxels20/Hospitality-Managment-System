@@ -30,14 +30,15 @@ class ServerHandler:
         pickled_object_patient_db = pickle.dumps(server_handler.get_patientdb())
 
         with self.__ServerConnectionManager.get_socket() as s:
-            s.listen()
-            conn, addr = s.accept()
-            with conn:
-                conn.sendall(pickled_object_emp_db)
-                time.sleep(1)
-                conn.sendall(pickled_object_patient_db)
-                time.sleep(1)
-                conn.sendall(pickled_object_medical_db)
+            while True:
+                s.listen()
+                conn, addr = s.accept()
+                with conn:
+                    conn.sendall(pickled_object_emp_db)
+                    time.sleep(1)
+                    conn.sendall(pickled_object_patient_db)
+                    time.sleep(1)
+                    conn.sendall(pickled_object_medical_db)
 
 
 serv = ServerHandler()

@@ -4,7 +4,7 @@ import pickle
 class GuiHandler():
     def __init__(self):
         self.__gui_connection_manager = gcm.GuiConnectionManager()
-        self.__gui = []
+        self.__gui = None
         self.__medical_db = []
         self.__emp_db = []
         self.__patient_db = []
@@ -23,11 +23,17 @@ class GuiHandler():
     def get_medical_db(self):
         return self.__medical_db
 
-gui_handler = GuiHandler()
+    def get_patient_db(self):
+        return self.__patient_db
 
-gui_handler.retrieve_data()
+    def get_emp_db(self):
+        return self.__emp_db
 
-print(gui_handler.get_medical_db().get_all_medicine())
+    def run_gui(self):
+        i = 3
+
+
+
 
 
 
