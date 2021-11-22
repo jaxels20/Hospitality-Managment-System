@@ -13,5 +13,6 @@ class NurseViewPatient:
                           ]
         window = sg.Window("View patient", self.__layout, finalize=True)
         window.Element('pat_info').update(patient_obj)
+        window.Element('_MEDICAL_').update(patient_obj.get_medical_record().get_patient_medical_list())
         return window
 

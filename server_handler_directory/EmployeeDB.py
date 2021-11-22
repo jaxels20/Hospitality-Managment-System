@@ -40,16 +40,14 @@ class EmployeeDB:
         self.__list_of_doctors.append(med_emp.MedicalEmployee(username, password, name, 'doctor'))
 
 
-    def remove_nurse(self, nurse_username):
-        for i in range(len(self.__list_of_nurses)):
-            if nurse_username == self.__list_of_nurses[i].get_username():
-                del self.__list_of_nurses[i]
+    def remove_nurse(self, nurse):
+        if nurse in self.__list_of_nurses:
+            self.__list_of_nurses.remove(nurse)
 
 
-    def remove_doctor(self, doctor_username):
-        for i in range(len(self.__list_of_doctors)):
-            if doctor_username == self.__list_of_doctors[i].get_username():
-                del self.__list_of_doctors[i]
+    def remove_doctor(self, doctor):
+        if doctor in self.__list_of_doctors:
+            self.__list_of_doctors.remove(doctor)
 
 
     def fill_list_of_doctors(self):

@@ -16,14 +16,10 @@ class PatientDB:
         patient = Patient.Patient(cpr, name, bloodtype, birthdate, height)
         self.__list_of_patients.append(patient)
 
-    # def remove_patient(self, patient_object):
-    #     if patient_object in self.__list_of_patients:
-    #         self.__list_of_patients.remove(patient_object)
+    def remove_patient(self, patient_object):
+        if patient_object in self.__list_of_patients:
+            self.__list_of_patients.remove(patient_object)
 
-    def remove_patient(self, patient_cpr):
-        for i in range(len(self.__list_of_patients)):
-            if patient_cpr == self.__list_of_patients[i].get_cpr():
-                del self.__list_of_patients[i]
 
    # def get_patient_from_cpr(self, cpr):
 
@@ -37,4 +33,3 @@ class PatientDB:
                     list.append(pickle.load(md))
                 except EOFError:
                     return list
-

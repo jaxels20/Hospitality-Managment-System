@@ -10,4 +10,6 @@ class MedicalRecord:
         if medicine_object in self.__patient_medical_list:
             self.__patient_medical_list.remove(medicine_object)
 
+    def get_patient_medical_list(self):
+        return self.__patient_medical_list
 

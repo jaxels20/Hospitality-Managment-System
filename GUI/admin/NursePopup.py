@@ -7,11 +7,11 @@ class NursePopup:
         self.layout = []
 
 
-    def run_nurse_popup(self):
+    def run_nurse_popup(self, nurse_obj):
         self.layout = [
             [sg.Text('Nurse information: ')],
-            [sg.Text("values['_NURSE_'][0]")],
-            [sg.Text("Type username to remove: ")],
-            [sg.InputText(key='nur_to_remove')],
+            [sg.Text([], key='nurse_info')],
             [sg.Button('Remove nurse')]]
-        return sg.Window("Nurse", self.layout, finalize=True)
+        window = sg.Window("Nurse", self.layout, finalize=True)
+        window.Element('nurse_info').update(nurse_obj)
+        return window

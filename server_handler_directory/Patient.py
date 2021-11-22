@@ -12,7 +12,10 @@ class Patient:
         self.__birthdate = birthdate
         self.__height = height
         self.__medical_record = MR.MedicalRecord()
-        self.financial_record = FR.FinancialRecord()
+        self.__financial_record = FR.FinancialRecord()
+
+    def get_financial_record(self):
+        return self.__financial_record
 
     def __eq__(self, other):
         if self.__cpr == other.__cpr:
@@ -20,14 +23,13 @@ class Patient:
         return False
 
     def __repr__(self):
-        return f'cpr: {self.__cpr} and name: {self.__name}'
+       return f'cpr: {self.__cpr} and name: {self.__name}'
 
     def get_cpr(self):
         return self.__cpr
 
-    def get_financial_record(self):
-        return self.financial_record
-
     def get_medical_record(self):
         return self.__medical_record
 
+    def get_birth(self):
+        return self.__birthdate

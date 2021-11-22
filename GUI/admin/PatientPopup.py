@@ -1,4 +1,5 @@
 import PySimpleGUI as sg
+import server_handler_directory.Patient as pat
 
 
 class PatientPopup:
@@ -9,9 +10,7 @@ class PatientPopup:
     def run_patient_popup(self, patient_obj):
         self.layout = [
             [sg.Text('Patient information:', size=(40, 1)), sg.Text('Billing record: ')],
-            [sg.Text([], size=(40, 1), key='pat_info'), sg.Listbox([], size=(30, 3), enable_events=True, key='_BILL_')],
-            [sg.Text("Type cpr to remove patient: ")],
-            [sg.InputText(key='pat_to_remove')],
+            [sg.Text([], size=(40, 1), key='pat_info'), sg.Listbox([], size=(50, 3), enable_events=True, key='_BILL_')],
             [sg.Button('Remove patient', size=(40, 1)), sg.Button('Generate bill')]]
         window = sg.Window("Patient", self.layout, finalize=True)
         window.Element('pat_info').update(patient_obj)

@@ -6,11 +6,11 @@ class DoctorPopup:
     def __init__(self):
         self.layout = []
 
-    def run_doctor_popup(self):
+    def run_doctor_popup(self, doctor_obj):
         self.layout =  [
             [sg.Text('Doctor information: ')],
-            [sg.Text("values['_DOCTOR_'][0]")],
-            [sg.Text("Type username to remove: ")],
-            [sg.InputText(key='doc_to_remove')],
+            [sg.Text([], key='doc_info')],
             [sg.Button('Remove doctor')]]
-        return sg.Window("Doctor", self.layout, finalize=True)
+        window = sg.Window("Doctor", self.layout, finalize=True)
+        window.Element('doc_info').update(doctor_obj)
+        return window
