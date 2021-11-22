@@ -1,0 +1,35 @@
+import server_handler_directory.MedicalRecord as MR
+import server_handler_directory.FinancialRecord as FR
+import sys
+sys.modules['MedicalRecord'] = MR
+sys.modules['FinancialRecord'] = FR
+
+class Patient:
+    def __init__(self, cpr, name, bloodtype, birthdate, height):
+        self.__cpr = cpr
+        self.__name = name
+        self.__bloodtype = bloodtype
+        self.__birthdate = birthdate
+        self.__height = height
+        self.__medical_record = MR.MedicalRecord()
+        self.__financial_record = FR.FinancialRecord()
+
+    def get_financial_record(self):
+        return self.__financial_record
+
+    def __eq__(self, other):
+        if self.__cpr == other.__cpr:
+            return True
+        return False
+
+    def __repr__(self):
+       return f'cpr: {self.__cpr} and name: {self.__name}'
+
+    def get_cpr(self):
+        return self.__cpr
+
+    def get_medical_record(self):
+        return self.__medical_record
+
+    def get_birth(self):
+        return self.__birthdate
