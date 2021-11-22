@@ -1,6 +1,5 @@
 import pickle
 from pathlib import Path
-import server_handler_directory.MedicalEmployee as MedicalEmployee
 
 class MedicalDB:
     def __init__(self):

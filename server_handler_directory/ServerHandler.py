@@ -1,7 +1,7 @@
-from server_handler_directory import EmployeeDB
-from server_handler_directory import PatientDB
-from server_handler_directory import Medical_DB
-from server_handler_directory import ServerConnectionManager
+import server_handler_directory.EmployeeDB as EmployeeDB
+import server_handler_directory.PatientDB as PatientDB
+import server_handler_directory.Medical_DB as Medical_DB
+import server_handler_directory.ServerConnectionManager as ServerConnectionManager
 import pickle
 import time
 

@@ -3,11 +3,17 @@ import server_handler_directory.MedicalEmployee as med_emp
 import pickle
 from pathlib import Path
 import sys
-from server_handler_directory import MedicalEmployee
-from server_handler_directory import Medicine
-sys.modules['MedicalEmployee'] = MedicalEmployee
-sys.modules['Medicine'] = Medicine
 
+#stod der før:
+# from server_handler_directory import MedicalEmployee
+# from server_handler_directory import Medicine
+# sys.modules['MedicalEmployee'] = MedicalEmployee
+# sys.modules['Medicine'] = Medicine
+
+#nyt
+from server_handler_directory import Medicine
+sys.modules['Medicine'] = Medicine
+sys.modules['MedicalEmployee'] = med_emp
 
 class EmployeeDB:
     def __init__(self):

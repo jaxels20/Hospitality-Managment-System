@@ -4,7 +4,6 @@ import GUI.doctor.DoctorViewPatient as dvp
 import GUI.doctor.DoctorViewMedicine as dvm
 import GUI.doctor.DoctorAddMedicine as dam
 import GUI.doctor.DoctorConfirmAdd as dca
-import server_handler_directory.ServerHandler as ServerHandler
 
 
 class DoctorGui:
@@ -12,9 +11,7 @@ class DoctorGui:
     def __init__(self, patient_DB, medical_DB):
         self.__doctor_view = dview.DoctorView(patient_DB)
         self.__doctor_view_patient = dvp.DoctorViewPatient()
-        #ovnstående virker men gør ikke det den skal
-
-
+        #ovnstående virker men gør ikke det den skal kan ikke se patient medical record
         self.__doctor_view_medicine = dvm.DoctorViewMedicine()
         self.__doctor_add_medicine = dam.DoctorAddMedicine(medical_DB)
         self.__confirm_add = dca.DoctorConfirmAdd()

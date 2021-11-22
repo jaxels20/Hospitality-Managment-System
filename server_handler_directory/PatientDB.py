@@ -1,13 +1,9 @@
 import pickle
 import server_handler_directory.Patient as Patient
-import server_handler_directory.MedicalRecord as MedicalRecord
-import server_handler_directory.FinancialRecord as FinancialRecord
 from pathlib import Path
 import sys
-from server_handler_directory import PatientDB
 sys.modules['Patient'] = Patient
-sys.modules['MedicalRecord'] = MedicalRecord
-sys.modules['FinancialRecord'] = FinancialRecord
+
 
 class PatientDB:
     def __init__(self):
@@ -36,7 +32,7 @@ class PatientDB:
         with open(file_path, 'rb') as md:
             while True:
                 try:
-                    list.append(pickle.load(md))
+                    list.append(Patient.Patient.unpickle_patient(md))
                 except EOFError:
                     return list
 

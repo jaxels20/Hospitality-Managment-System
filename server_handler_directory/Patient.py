@@ -1,5 +1,9 @@
 import server_handler_directory.MedicalRecord as MR
 import server_handler_directory.FinancialRecord as FR
+import pickle
+import sys
+sys.modules['MedicalRecord'] = MR
+sys.modules['FinancialRecord'] = FR
 
 
 class Patient:
@@ -23,3 +27,7 @@ class Patient:
 
     def get_cpr(self):
         return self.__cpr
+
+    @staticmethod
+    def unpickle_patient(pickle_object):
+        return pickle.load(pickle_object)

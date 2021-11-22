@@ -9,7 +9,7 @@ import GUI.GUI_class as GUI_class
 class GuiHandler():
     def __init__(self):
         self.__gui_connection_manager = gcm.GuiConnectionManager()
-        self.__gui = GUI_class.GUIClass()
+        self.__gui = None
         self.__medical_db = []
         self.__emp_db = []
         self.__patient_db = []
@@ -34,8 +34,14 @@ class GuiHandler():
     def get_emp_db(self):
         return self.__emp_db
 
-    def run_gui(self):
+    def run_doctor_gui(self):
         self.__gui.get_doctor_gui().run_doctor(self.__patient_db, self.__medical_db)
+
+    def run_nurse_gui(self):
+        self.__gui.get_nurse_gui().run_nurse(self.__patient_db)
+
+    def create_gui(self):
+        self.__gui = GUI_class.GUIClass(self.__medical_db, self.__patient_db, self.__emp_db)
 
 
 

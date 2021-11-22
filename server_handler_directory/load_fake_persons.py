@@ -1,5 +1,5 @@
-import server_handler_directory.MedicalEmployee
-import server_handler_directory.Patient
+import server_handler_directory.MedicalEmployee as MedicalEmployee
+import server_handler_directory.Patient as Patient
 import pickle
 
 patients = [Patient.Patient('1234567890', 'Fede', 'a+', '19/10/2001', 180), \

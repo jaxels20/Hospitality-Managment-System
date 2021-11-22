@@ -2,10 +2,10 @@ import PySimpleGUI as sg
 
 class NurseView:
 
-    def __init__(self, srv_handler):
+    def __init__(self, patient_db):
         self.__layout = [[sg.Button('Logout')],
                          [sg.Text('Patients', size=(45,1))],
-                         [sg.Listbox(srv_handler.get_patientdb().get_all_patients(),
+                         [sg.Listbox(patient_db.get_all_patients(),
                                      size=(45, 10), enable_events=True, key='_PATIENT_')]
                          ]
 
