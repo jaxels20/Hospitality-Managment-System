@@ -26,14 +26,14 @@ class DoctorGui:
         while True:
             window, event, values = sg.read_all_windows()
 
-            if event == sg.WIN_CLOSED or event == 'Logout':
+            if event == sg.WIN_CLOSED or event == 'Logout' or event == 'Back':
                 window.close()
                 if window == window2:  # if closing win 2, mark as closed
                     window2 = None
                 elif window == window1:  # if closing win 1, exit program
                     break
             elif event == '_PATIENT_':
-                window2 = self.__doctor_view_patient.run_doctor_view_patient()
+                window2 = self.__doctor_view_patient.run_doctor_view_patient(values['_PATIENT_'][0])
             elif event == '_MEDICAL_':
                 window2 = self.__doctor_view_medicine.run_doctor_view_medicine()
             elif event == 'Add medicine':

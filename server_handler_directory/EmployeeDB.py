@@ -29,6 +29,8 @@ class EmployeeDB:
     def get_all_nurses(self):
         return self.__list_of_nurses
 
+    def get_admin(self):
+        return self.__admin
 
     def create_nurse(self, username, password, name):
         self.__list_of_nurses.append(med_emp.MedicalEmployee(username, password, name, 'nurse'))

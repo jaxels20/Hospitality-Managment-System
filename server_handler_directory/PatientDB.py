@@ -25,6 +25,8 @@ class PatientDB:
             if patient_cpr == self.__list_of_patients[i].get_cpr():
                 del self.__list_of_patients[i]
 
+   # def get_patient_from_cpr(self, cpr):
+
 
     def fill_list_of_patients(self):
         file_path = Path(__file__).parents[0].joinpath("data", "patients_data.pkl")
@@ -32,7 +34,7 @@ class PatientDB:
         with open(file_path, 'rb') as md:
             while True:
                 try:
-                    list.append(Patient.Patient.unpickle_patient(md))
+                    list.append(pickle.load(md))
                 except EOFError:
                     return list
 
