@@ -15,4 +15,5 @@ class PatientPopup:
             [sg.Button('Remove patient', size=(40, 1)), sg.Button('Generate bill')]]
         window = sg.Window("Patient", self.layout, finalize=True)
         window.Element('pat_info').update(patient_obj)
+        window.Element('_BILL_').update(values=patient_obj.get_financial_record().get_patient_bill_list())
         return window

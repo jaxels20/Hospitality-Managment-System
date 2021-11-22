@@ -11,9 +11,8 @@ class Patient:
         self.__bloodtype = bloodtype
         self.__birthdate = birthdate
         self.__height = height
-
-        self.medical_record = MR.MedicalRecord()
-        self.billing_record = FR.FinancialRecord()
+        self.__medical_record = MR.MedicalRecord()
+        self.financial_record = FR.FinancialRecord()
 
     def __eq__(self, other):
         if self.__cpr == other.__cpr:
@@ -26,4 +25,9 @@ class Patient:
     def get_cpr(self):
         return self.__cpr
 
+    def get_financial_record(self):
+        return self.financial_record
+
+    def get_medical_record(self):
+        return self.__medical_record
 
