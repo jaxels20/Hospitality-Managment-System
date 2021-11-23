@@ -61,8 +61,9 @@ class AdminGui:
                 window1['_NURSE_'].update(employee_db.get_all_nurses())
 
             elif event == '_DOCTOR_':
-                selected_doctor = values['_DOCTOR_'][0]
-                window2 = self.__doctor_popup.run_doctor_popup(selected_doctor)
+                if len( values['_DOCTOR_']) != 0:
+                    selected_doctor = values['_DOCTOR_'][0]
+                    window2 = self.__doctor_popup.run_doctor_popup(selected_doctor)
 
             elif event == 'Remove doctor':
                 window.close()
@@ -70,8 +71,9 @@ class AdminGui:
                 window1['_DOCTOR_'].update(employee_db.get_all_doctors())
 
             elif event == '_NURSE_':
-                selected_nurse = values['_NURSE_'][0]
-                window2 = self.__nurse_popup.run_nurse_popup(selected_nurse)
+                if len(values['_NURSE_']) != 0:
+                    selected_nurse = values['_NURSE_'][0]
+                    window2 = self.__nurse_popup.run_nurse_popup(selected_nurse)
 
             elif event == 'Remove nurse':
                 window.close()
@@ -79,8 +81,9 @@ class AdminGui:
                 window1['_NURSE_'].update(employee_db.get_all_nurses())
 
             elif event == '_PATIENT_':
-                selected_patient = values['_PATIENT_'][0]
-                window2 = self.__patient_popup.run_patient_popup(selected_patient)
+                if len(values['_PATIENT_']) != 0:
+                    selected_patient = values['_PATIENT_'][0]
+                    window2 = self.__patient_popup.run_patient_popup(selected_patient)
 
             elif event == 'Remove patient':
                 window.close()
