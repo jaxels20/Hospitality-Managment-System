@@ -9,8 +9,15 @@ import GUI.admin.PatientPopup as patp
 
 
 class AdminGui:
-
+    """Represents a class that handles all the different views that an admin can see.
+    """
     def __init__(self, patient_db, employee_db):
+        """Constructs all the necessary attributes for the AdminGui object.
+
+        Args:
+            patient_db (PatientDB): A database for patients. 
+            employee_db (EmployeeDB): A database for medical employees.
+        """        
         self.__admin_view = aview.AdminView(patient_db, employee_db)
         self.__add_patient_view = addp.AddPatientView()
         self.__add_doctor_view = addd.AddDoctorView()
@@ -20,9 +27,17 @@ class AdminGui:
         self.__patient_popup = patp.PatientPopup()
 
     def run_admin(self, patient_db, employee_db):
+        """Runs the admin gui. Creates two variables which can hold the windows that are shown
+        to the user. At first, one of the windows are set to the first admin view. The while loop
+        handles all the events that can happen when a user clicks on different elements in 
+        one of the windows that can be shown. 
+        
+        Args:
+            patient_db (PatientDB): A database for patients.
+            employee_db (EmployeeDB): A database for medical employees.
+        """        
         AdminView = self.__admin_view.run_admin_view()
 
-        # Creates to attributes for windows.
         window1, window2 = AdminView, None
 
         while True:
@@ -30,9 +45,9 @@ class AdminGui:
 
             if event == sg.WIN_CLOSED or event == 'Exit' or event == 'Logout':
                 window.close()
-                if window == window2:  # if closing win 2, mark as closed
+                if window == window2: 
                     window2 = None
-                elif window == window1:  # if closing win 1, exit program
+                elif window == window1: 
                     break
 
             elif event == 'Add patient':

@@ -1,8 +1,14 @@
 import PySimpleGUI as sg
 
 class NurseView:
-
+    """Represents the view where a nurse can see an overview of all the patients.
+    """
     def __init__(self, patient_db):
+        """Constructs all the necessary attributes for the NurseView object.
+
+        Args:
+            patient_db (PatientDB): A database of patients.
+        """        
         self.__layout = [[sg.Button('Logout')],
                          [sg.Text('Patients', size=(45,1))],
                          [sg.Listbox(patient_db.get_all_patients(),
@@ -10,4 +16,9 @@ class NurseView:
                          ]
 
     def run_nurse_view(self):
+        """Runs the nurse view.
+
+        Returns:
+            sg.Window: Adds a label and initialize the layout for the window.
+        """      
         return sg.Window("Nurse view", self.__layout, finalize=True)

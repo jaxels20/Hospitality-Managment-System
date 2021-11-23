@@ -7,19 +7,33 @@ import GUI.doctor.DoctorConfirmAdd as dca
 
 
 class DoctorGui:
-
+    """Represents a class that handles all the different views that a doctor can see.
+    """
     def __init__(self, patient_DB, medical_DB):
+        """Constructs all the necessary attributes for the DoctorGui object.
+
+        Args:
+            patient_DB (PatientDB): A database of patients.
+            medical_DB (EmployeeDB): A database of medical employees.
+        """        
         self.__doctor_view = dview.DoctorView(patient_DB)
         self.__doctor_view_patient = dvp.DoctorViewPatient()
-        #ovnstående virker men gør ikke det den skal kan ikke se patient medical record
         self.__doctor_view_medicine = dvm.DoctorViewMedicine()
         self.__doctor_add_medicine = dam.DoctorAddMedicine()
         self.__confirm_add = dca.DoctorConfirmAdd()
 
     def run_doctor(self, patient_DB, medical_DB):
+        """Runs the doctor gui. Creates three variables which can hold the windows that are shown
+        to the user. At first one of the windows are set to the first doctor view. The while loop
+        handles all the events that can happen when a user clicks on different elements in 
+        one of the windows that can be shown. 
+
+        Args:
+            patient_DB (PatientDB): A database of patients.
+            medical_DB (EmployeeDB): A database of medical employees.
+        """        
         DoctorView = self.__doctor_view.run_doctor_view()
 
-        # Creates to attributes for windows.
         window1, window2, window3 = DoctorView, None, None
 
 
@@ -28,11 +42,11 @@ class DoctorGui:
 
             if event == sg.WIN_CLOSED or event == 'Logout' or event == 'Back' or event == 'Cancel':
                 window.close()
-                if window == window2:  # if closing win 2, mark as closed
+                if window == window2: 
                     window2 = None
                 elif window == window3:
                     window3 = None
-                elif window == window1:  # if closing win 1, exit program
+                elif window == window1:
                     break
             elif event == '_PATIENT_':
                 if len(values['_PATIENT_']) != 0:
@@ -61,10 +75,5 @@ class DoctorGui:
                 selected_patient.get_medical_record().remove_medicine(selected_medicine)
                 window.close()
                 window3['_MEDICAL_'].update(selected_patient.get_medical_record().get_patient_medical_list())
-
-
-
-
-
 
         window.close()
