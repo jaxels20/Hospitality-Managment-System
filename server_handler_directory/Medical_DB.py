@@ -2,10 +2,21 @@ import pickle
 from pathlib import Path
 
 class MedicalDB:
+    """The class containg on the methods and atributtes of the medical db.
+        This class defines what medical objects the doctor can add. In theory it will contain all possbible medicine.
+    """    
     def __init__(self):
+        """Constructs all the necessary attributes for the Medical_DB object.
+        """        
         self.__list_of_medicine = self.fill_medical_db()
 
     def fill_medical_db(self):
+        """The method loads in the pickle file containing the predefined medical objects.
+            This method gets called in the constructor.
+
+        Returns:
+            list: list containing all the medicine objects.
+        """        
         list = []
         file_path = Path(__file__).parents[0].joinpath("data", "medical_data.pkl")
         with open(file_path, 'rb') as md:
@@ -16,6 +27,11 @@ class MedicalDB:
                     return list
 
     def get_all_medicine(self):
+        """get all the medicine objects in the database.
+
+        Returns:
+            list: contains all the medicine objects in the database.
+        """        
         return self.__list_of_medicine
 
 
