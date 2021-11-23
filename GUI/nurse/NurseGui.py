@@ -35,11 +35,13 @@ class NurseGui:
                 elif window == window1:  # if closing win 1, exit program
                     break
             elif event == '_PATIENT_':
-                selected_patient = values['_PATIENT_'][0]
-                window3 = self.__nurse_view_patient.run_nurse_view_patient(selected_patient)
+                if len(values['_PATIENT_']) != 0:
+                    selected_patient = values['_PATIENT_'][0]
+                    window3 = self.__nurse_view_patient.run_nurse_view_patient(selected_patient)
             elif event == '_MEDICAL_':
-                selected_medicine = values['_MEDICAL_'][0]
-                window2 = self.__nurse_view_medicine.run_nurse_view_medicine()
+                if len(values['_MEDICAL_']) != 0:
+                    selected_medicine = values['_MEDICAL_'][0]
+                    window2 = self.__nurse_view_medicine.run_nurse_view_medicine()
             elif event == 'Save mark':
                 if values['mark_as_filled'] is True:
                     selected_medicine.mark_as_filled()

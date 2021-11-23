@@ -4,7 +4,7 @@
 
 import GUI.GuiConnectionManager as gcm
 import pickle
-import GUI.GUI_class as GUI_class
+import GUI.Gui as GUI_class
 
 
 
@@ -52,7 +52,7 @@ class GuiHandler():
         return self.__gui.get_login_gui().run_login()
 
     def create_gui(self):
-        self.__gui = GUI_class.GUIClass(self.__medical_db, self.__patient_db, self.__emp_db)
+        self.__gui = GUI_class.Gui(self.__medical_db, self.__patient_db, self.__emp_db)
 
 
 

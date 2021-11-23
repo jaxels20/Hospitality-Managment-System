@@ -4,7 +4,7 @@ import GUI.doctor.DoctorGui as dv
 import GUI.nurse.NurseGui as nv
 
 
-class GUIClass:
+class Gui:
 
     def __init__(self, medical_db, patient_db, emp_db):
         self.__login_gui = lg.LoginGui()

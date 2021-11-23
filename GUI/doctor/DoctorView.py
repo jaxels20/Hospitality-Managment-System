@@ -1,6 +1,5 @@
 import PySimpleGUI as sg
 
-
 class DoctorView:
 
     def __init__(self, patient_db):
