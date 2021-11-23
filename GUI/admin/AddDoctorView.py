@@ -2,12 +2,20 @@ import PySimpleGUI as sg
 
 
 class AddDoctorView:
-
+    """Represents the view where an admin can add a doctor.
+    """
     def __init__(self):
+        """Constructs all the necessary attributes for the AddDoctorView object.
+        """        
         self.__layout = []
 
 
     def run_add_doctor_view(self):
+        """Runs the add doctor view. 
+
+        Returns:
+            sg.Window: Adds a label and initialize the layout for the window.
+        """        
         self.__layout = [
             [sg.Text('Name', size=(8, 1)), sg.InputText(key='d_name')],
             [sg.Text('Username', size=(8, 1)), sg.InputText(key='d_username')],

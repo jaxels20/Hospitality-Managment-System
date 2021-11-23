@@ -6,8 +6,14 @@ import GUI.nurse.NurseViewPatient as nvp
 
 
 class NurseGui:
-
+    """Represents a class that handles all the different views that a nurse can see.
+    """
     def __init__(self, patient_db):
+        """Constructs all the necessary attributes for the NurseGui object.
+
+        Args:
+            patient_DB (PatientDB): A database of patients.
+        """        
         self.__nurse_view = nv.NurseView(patient_db)
         self.__nurse_view_medicine = nvm.NurseViewMedicine()
         self.__nurse_view_patient = nvp.NurseViewPatient()
@@ -15,11 +21,16 @@ class NurseGui:
 
 
     def run_nurse(self, patient_db):
+        """Runs the nurse gui. Creates three variables which can hold the windows that are shown
+        to the user. At first one of the windows are set to the first nurse view. The while loop
+        handles all the events that can happen when a user clicks on different elements in 
+        one of the windows that can be shown. 
 
-        # Creates a window for admin view
+        Args:
+            patient_db (PatientDB): A database of patients.
+        """        
         NurseView = self.__nurse_view.run_nurse_view()
 
-        # Creates to attributes for windows.
         window1, window2, window3 = NurseView, None, None
 
 
@@ -28,11 +39,11 @@ class NurseGui:
 
             if event == sg.WIN_CLOSED or event == 'Logout' or event == 'Back':
                 window.close()
-                if window == window2:  # if closing win 2, mark as closed
+                if window == window2: 
                     window2 = None
                 elif window == window3:
                     window3 = None
-                elif window == window1:  # if closing win 1, exit program
+                elif window == window1: 
                     break
             elif event == '_PATIENT_':
                 if len(values['_PATIENT_']) != 0:
@@ -47,7 +58,5 @@ class NurseGui:
                     selected_medicine.mark_as_filled()
                     window.close()
                     window3['_MEDICAL_'].update(selected_patient.get_medical_record().get_patient_medical_list())
-
-
 
         window.close()
