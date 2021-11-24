@@ -2,38 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="297a116b-03e8-485e-baa2-b048da02d067" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Hospitality-Managment-System.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Hospitality-Managment-System.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/Gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/Gui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/GuiConnectionManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/GuiConnectionManager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/GuiHandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/GuiHandler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/admin/PatientPopup.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/admin/PatientPopup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/doctor/DoctorConfirmAdd.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/doctor/DoctorConfirmAdd.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/doctor/DoctorGui.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/doctor/DoctorGui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/doctor/DoctorView.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/doctor/DoctorView.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/login/LoginGui.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/login/LoginGui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/nurse/NurseGui.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/nurse/NurseGui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/nurse/NurseViewMedicine.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/nurse/NurseViewMedicine.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/nurse/NurseViewPatient.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/nurse/NurseViewPatient.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI_main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server_main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_handler_directory/FinancialRecord.py" beforeDir="false" afterPath="$PROJECT_DIR$/server_handler_directory/FinancialRecord.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_handler_directory/MedicalEmployee.py" beforeDir="false" afterPath="$PROJECT_DIR$/server_handler_directory/MedicalEmployee.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_handler_directory/MedicalRecord.py" beforeDir="false" afterPath="$PROJECT_DIR$/server_handler_directory/MedicalRecord.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_handler_directory/Medical_DB.py" beforeDir="false" afterPath="$PROJECT_DIR$/server_handler_directory/Medical_DB.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_handler_directory/Patient.py" beforeDir="false" afterPath="$PROJECT_DIR$/server_handler_directory/Patient.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_handler_directory/ServerConnectionManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/server_handler_directory/ServerConnectionManager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_handler_directory/ServerHandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/server_handler_directory/ServerHandler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_handler_directory/data/patients_data.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/server_handler_directory/data/patients_data.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_handler_directory/load_fake_persons.py" beforeDir="false" afterPath="$PROJECT_DIR$/server_handler_directory/load_fake_persons.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -49,7 +30,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
-  <component name="RunManager" selected="Python.GUI_main">
+  <component name="RunManager" selected="Python.test1">
     <configuration name="GUI_main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Hospitality-Managment-System" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -116,8 +97,31 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Hospitality-Managment-System" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test1" />
         <item itemvalue="Python.GUI_main" />
         <item itemvalue="Python.ServerHandler" />
         <item itemvalue="Python.load_fake_persons" />
@@ -132,7 +136,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1637738292622</updated>
-      <workItem from="1637738294213" duration="1504000" />
+      <workItem from="1637738294213" duration="2912000" />
     </task>
     <servers />
   </component>
@@ -143,5 +147,6 @@
     <SUITE FILE_PATH="coverage/Hospitality_Managment_System$load_fake_persons.coverage" NAME="load_fake_persons Coverage Results" MODIFIED="1637739798710" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/server_handler_directory" />
     <SUITE FILE_PATH="coverage/Hospitality_Managment_System$GUI_main.coverage" NAME="GUI_main Coverage Results" MODIFIED="1637739807990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Hospitality_Managment_System$ServerHandler.coverage" NAME="ServerHandler Coverage Results" MODIFIED="1637739804258" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/server_handler_directory" />
+    <SUITE FILE_PATH="coverage/Hospitality_Managment_System$test1.coverage" NAME="test1 Coverage Results" MODIFIED="1637741217136" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
