@@ -11,7 +11,7 @@ class MedicalRecord:
         """Add a medicine object to the medical list.
 
         Args:
-            Medicine_object (Medicine): The medicine object you want to add to the medical list.
+            medicine_object (Medicine): The medicine object you want to add to the medical list.
         """        
         self.__patient_medical_list.append(medicine_object)
 

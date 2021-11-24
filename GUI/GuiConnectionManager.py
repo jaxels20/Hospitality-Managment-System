@@ -1,5 +1,6 @@
 import socket
 
+
 class GuiConnectionManager:
     """A class to run the the connection between the client and the server.
     """    
@@ -10,7 +11,6 @@ class GuiConnectionManager:
         self.__host = '127.0.0.1'
         self.__port = 4671
         self.__socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
 
     def get_socket(self):
         """Retrieve the socket object.

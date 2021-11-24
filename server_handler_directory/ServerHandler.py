@@ -7,7 +7,7 @@ import time
 
 
 class ServerHandler:
-    """The objects whihc handles the server.
+    """The objects which handles the server.
     """
     def __init__(self):
         """Constructs all the necessary attributes for the ServerHandler object.
@@ -42,7 +42,8 @@ class ServerHandler:
         return self.__medical_db
 
     def send_all_data(self):
-        """This method makes the server listen for clients and if a client connects it send all the data needed for the client.
+        """This method makes the server listen for clients and if a client connects it send all the data needed
+        for the client.
         """        
         server_handler = ServerHandler()
         pickled_object_medical_db = pickle.dumps(server_handler.get_medicaldb())
@@ -60,9 +61,9 @@ class ServerHandler:
                     time.sleep(1)
                     conn.sendall(pickled_object_medical_db)
 
+
 if __name__ == '__main__':
     server = ServerHandler()
-
     server.send_all_data()
 
 

@@ -1,9 +1,10 @@
 import pickle
 from pathlib import Path
 
+
 class MedicalDB:
-    """The class containg on the methods and atributtes of the medical db.
-        This class defines what medical objects the doctor can add. In theory it will contain all possbible medicine.
+    """The class contain on the methods and attributes of the medical db.
+        This class defines what medical objects the doctor can add. In theory it will contain all possible medicine.
     """    
     def __init__(self):
         """Constructs all the necessary attributes for the Medical_DB object.

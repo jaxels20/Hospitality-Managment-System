@@ -19,7 +19,7 @@ class FinancialRecord:
         return self.__patient_bill_list
 
     def generate_bill(self, patient_obj):
-        """Generate a bill for the all medicine in a medical reccord not yet billed.
+        """Generate a bill for the all medicine in a medical record not yet billed.
 
         Args:
             patient_obj (Patient): The patient where you would like to add the bill.
@@ -30,5 +30,5 @@ class FinancialRecord:
                 medicine.mark_as_billed()
                 sum += medicine.get_price()
         if sum != 0:
-            bill = Billing.Billing(date.today(), sum)
+            bill = Billing.Billing(str(date.today()), sum)
             self.__patient_bill_list.append(bill)

@@ -6,9 +6,9 @@ import pickle
 This file contains all the information of making the pickle files containing the predefined nurses/doctors/patients.
 """
 
-patients = [Patient.Patient('1234567890', 'Fede', 'a+', '19/10/2001', 180),
+patients = [Patient.Patient('1234567890', 'Federico', 'a+', '19/10/2001', 180),
             Patient.Patient('0987654321', 'Israel', 'b+', '19/11/2001', 160),
-            Patient.Patient('1357908642', 'Wupti', 'c+', '19/7/2001', 190)]
+            Patient.Patient('1357908642', 'Ralph', 'c+', '19/7/2001', 190)]
 
 Nurses = [MedicalEmployee.MedicalEmployee('nurse1', 'nurse1', 'nurse1', 'nurse'),
           MedicalEmployee.MedicalEmployee('nurse2', 'nurse2', 'nurse2', 'nurse')]

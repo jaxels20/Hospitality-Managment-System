@@ -9,7 +9,7 @@ import GUI.doctor.DoctorConfirmAdd as dca
 class DoctorGui:
     """Represents a class that handles all the different views that a doctor can see.
     """
-    def __init__(self, patient_DB, medical_DB):
+    def __init__(self, patient_DB):
         """Constructs all the necessary attributes for the DoctorGui object.
 
         Args:
@@ -22,7 +22,7 @@ class DoctorGui:
         self.__doctor_add_medicine = dam.DoctorAddMedicine()
         self.__confirm_add = dca.DoctorConfirmAdd()
 
-    def run_doctor(self, patient_DB, medical_DB):
+    def run_doctor(self, medical_DB):
         """Runs the doctor gui. Creates three variables which can hold the windows that are shown
         to the user. At first one of the windows are set to the first doctor view. The while loop
         handles all the events that can happen when a user clicks on different elements in 

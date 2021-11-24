@@ -20,7 +20,7 @@ class NurseGui:
 
 
 
-    def run_nurse(self, patient_db):
+    def run_nurse(self):
         """Runs the nurse gui. Creates three variables which can hold the windows that are shown
         to the user. At first one of the windows are set to the first nurse view. The while loop
         handles all the events that can happen when a user clicks on different elements in 

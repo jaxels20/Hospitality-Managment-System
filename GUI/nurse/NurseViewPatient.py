@@ -1,5 +1,6 @@
 import PySimpleGUI as sg
 
+
 class NurseViewPatient:
     """Represents the view where a nurse can see more specific details about medicine for a patient.
     """

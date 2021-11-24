@@ -30,7 +30,7 @@ class LoginGui:
         """Verifies a login by an user.
 
         Args:
-            emp_db (EmploeeDB): A database of medical employees.
+            emp_db (EmployeeDB): A database of medical employees.
             username (str): A username that is entered in the login view.
             password (str): A password that is entered in the login view.
 

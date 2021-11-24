@@ -18,7 +18,7 @@ class Gui:
         """        
         self.__login_gui = lg.LoginGui()
         self.__admin_gui = av.AdminGui(patient_db, emp_db)
-        self.__doctor_gui = dv.DoctorGui(patient_db, medical_db)
+        self.__doctor_gui = dv.DoctorGui(patient_db)
         self.__nurse_gui = nv.NurseGui(patient_db)
 
     def get_doctor_gui(self):

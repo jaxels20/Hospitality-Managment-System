@@ -1,4 +1,3 @@
-
 class MedicalEmployee:
     """A class to represent a medical employee.
     """
@@ -25,7 +24,7 @@ class MedicalEmployee:
         return f"Name: {self.__name}, Username: {self.__username}"
 
     def __eq__(self, other):
-        """The bulit in function which defines how the equality will be checked between medical employee objects.
+        """The built in function which defines how the equality will be checked between medical employee objects.
 
         Args:
             other ([MedicalEmployee): The medical employee object you would like to compare self to.
@@ -38,7 +37,7 @@ class MedicalEmployee:
         return False
 
     def get_username(self):
-        """retrieve the username of a specfic medical employee.
+        """retrieve the username of a specific medical employee.
 
         Returns:
             string: a string which is the username of the medical employee.
@@ -46,7 +45,7 @@ class MedicalEmployee:
         return self.__username
 
     def get_password(self):
-        """retrieve the password of a specfic medical employee.
+        """retrieve the password of a specific medical employee.
 
         Returns:
             string: a string which is the password of the medical employee.

@@ -4,8 +4,9 @@ import sys
 sys.modules['MedicalRecord'] = MR
 sys.modules['FinancialRecord'] = FR
 
+
 class Patient:
-    """Represenentation of a patient
+    """Representation of a patient
     """     
     def __init__(self, cpr, name, bloodtype, birthdate, height):
         """Constructs all the necessary attributes for the patient object.
@@ -45,7 +46,7 @@ class Patient:
         """ retrieve the cpr number from a patient.
 
         Returns:
-            string: An unique indetifier for each patient.
+            string: An unique identifier for each patient.
         """        
         return self.__cpr
 
@@ -61,6 +62,6 @@ class Patient:
         """Retrieve the birthdate of a patient.
 
         Returns:
-            string: The birtdate of a patient.
+            string: The birthdate of a patient.
         """        
         return self.__birthdate

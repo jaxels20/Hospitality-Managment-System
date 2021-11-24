@@ -1,12 +1,6 @@
-# import server_handler_directory.MedicalRecord as MR
-# import server_handler_directory.FinancialRecord as FR
-# import sys
-
 import GUI.GuiConnectionManager as gcm
 import pickle
 import GUI.Gui as GUI_class
-
-
 
 class GuiHandler():
     """A class with the object which handles the GUI.
@@ -21,7 +15,8 @@ class GuiHandler():
         self.__patient_db = []
 
     def retrieve_data(self):
-        """Retrieves all the data through a connection as pickle files, and load the files in to the different databases for patients, medicine and medical employees.
+        """Retrieves all the data through a connection as pickle files, and load the files in to the different
+            databases for patients, medicine and medical employees.
         """        
         with self.__gui_connection_manager.get_socket() as s:
             s.connect((self.__gui_connection_manager.get_host(), self.__gui_connection_manager.get_port()))
@@ -68,12 +63,12 @@ class GuiHandler():
     def run_doctor_gui(self):
         """Runs the doctor gui.
         """        
-        self.__gui.get_doctor_gui().run_doctor(self.__patient_db, self.__medical_db)
+        self.__gui.get_doctor_gui().run_doctor(self.__medical_db)
 
     def run_nurse_gui(self):
         """Runs the nurse gui.
         """  
-        self.__gui.get_nurse_gui().run_nurse(self.__patient_db)
+        self.__gui.get_nurse_gui().run_nurse()
 
     def run_admin_gui(self):
         """Runs the admin gui.

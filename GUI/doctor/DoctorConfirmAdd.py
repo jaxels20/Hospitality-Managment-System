@@ -1,5 +1,6 @@
 import PySimpleGUI as sg
 
+
 class DoctorConfirmAdd:
     """Represents the popup when a doctor shall confirm the adding of a medicine to a patient
     """
@@ -7,7 +8,6 @@ class DoctorConfirmAdd:
         """Constructs all the necessary attributes for the DoctorConfirmAdd object.
         """ 
         self.__layout = []
-
 
     def run_doctor_confirm_add(self):
         """Runs the popup where the doctor confirm the added medicine.

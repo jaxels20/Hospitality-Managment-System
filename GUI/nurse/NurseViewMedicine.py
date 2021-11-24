@@ -1,5 +1,6 @@
 import PySimpleGUI as sg
 
+
 class NurseViewMedicine:
     """Represents the popup where a nurse can mark a medicine as filled for a specific patient.
     """
@@ -7,7 +8,6 @@ class NurseViewMedicine:
         """Constructs all the necessary attributes for the NurseViewMedicine object.
         """  
         self.__layout = []
-
 
     def run_nurse_view_medicine(self):
         """Runs the popup where a nurse can mark a medicine as filled.

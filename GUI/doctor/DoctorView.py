@@ -1,5 +1,6 @@
 import PySimpleGUI as sg
 
+
 class DoctorView:
     """Represents the view where a doctor can see an overview of all the patients.
     """

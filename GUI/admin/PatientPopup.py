@@ -1,5 +1,4 @@
 import PySimpleGUI as sg
-import server_handler_directory.Patient as pat
 
 
 class PatientPopup:

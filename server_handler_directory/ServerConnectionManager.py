@@ -1,4 +1,3 @@
-
 import socket
 
 
@@ -7,7 +6,8 @@ class ServerConnectionManager:
     """    
     def __init__(self):
         """ Constructs all the necessary attributes for the ServerConnectionManager object.
-        Notice that some of this attributes can be changed but should not be in this program, but for fututre use this could be considered
+        Notice that some of this attributes can be changed but should not be in this program, but for future use this
+        could be considered
         """        
         self.__host = '127.0.0.1'
         self.__port = 4671

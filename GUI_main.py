@@ -1,5 +1,7 @@
 import GUI.GuiHandler as GH
-
+'''
+This is the main gui file and should be run after the server_handler_directory file. this file will start the gui.
+'''
 
 if __name__ == '__main__':
     gui_handler = GH.GuiHandler()
@@ -21,11 +23,4 @@ if __name__ == '__main__':
 
         if usertype == 'verified nurse':
             gui_handler.run_nurse_gui()
-
-
-
-
-
-    #gui_handler.run_gui()
-
 
